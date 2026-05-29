@@ -1,0 +1,46 @@
+/* Stili base per Gaia HSE — tema dark/neutral */
+:root{
+  --bg:#0b0f14;
+  --surface:#0f1720;
+  --muted:#9ca3af;
+  --accent:#7dd3fc;
+  --accent-2:#60a5fa;
+  --container:1100px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#e6eef8; background:var(--bg)}
+.container{max-width:var(--container);margin:0 auto;padding:2rem}
+.site-header{background:transparent;border-bottom:1px solid rgba(255,255,255,0.04)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.1rem}
+.nav-toggle{display:none;background:none;border:0;font-size:1.4rem;color:var(--muted)}
+.site-nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+.btn{display:inline-block;padding:.5rem .9rem;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--accent);text-decoration:none}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#071023;border:0}
+.hero{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:4rem 0;text-align:center}
+.hero h1{font-size:2rem;margin:.2rem 0;color:#f8fafc}
+.hero p{color:var(--muted);max-width:64ch;margin:.5rem auto}
+.features h2,.about h2,.contact h2,.ai-core h2,.pricing h2{margin-top:0;color:#f8fafc}
+.features .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}
+article{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));padding:1.25rem;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
+.about{background:transparent;padding:2rem 0}
+.contact form{display:grid;gap:.75rem;max-width:560px}
+.contact input,.contact textarea{width:100%;padding:.6rem;border:1px solid rgba(255,255,255,0.04);border-radius:6px;background:transparent;color:var(--muted)}
+.site-footer{background:transparent;border-top:1px solid rgba(255,255,255,0.03);padding:1rem 0;text-align:center;color:var(--muted)}
+
+.ai-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.5rem;margin-top:1rem;padding-left:0;list-style:none}
+.ai-features li{background:rgba(255,255,255,0.02);padding:.6rem;border-radius:6px}
+
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.tier{padding:1rem;border-radius:8px;text-align:center}
+.tier .price{font-size:1.2rem;font-weight:700;color:var(--accent);margin:.5rem 0}
+.tier.featured{box-shadow:0 6px 20px rgba(99,102,241,0.06);border:1px solid rgba(125,211,252,0.08)}
+
+
+@media (max-width:720px){
+  .nav-toggle{display:block}
+  .site-nav{display:none;flex-direction:column;margin-top:.5rem}
+  .site-nav a{margin:0.4rem 0}
+  .header-inner{gap:.5rem}
+  .hero h1{font-size:1.5rem}
+}

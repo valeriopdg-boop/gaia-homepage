@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Gaia HSE — Sicurezza sul lavoro semplificata</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">Gaia HSE</a>
+        <button id="nav-toggle" class="nav-toggle">☰</button>
+        <nav class="site-nav" id="site-nav">
+          <a href="#features">Funzionalità</a>
+          <a href="#about">Chi siamo</a>
+          <a href="#contact">Contatti</a>
+          <a class="btn" href="#contact">Prova</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Gaia HSE — Compliance HSE per l'edilizia moderna</h1>
+          <p>Dashboard centralizzata per documenti obbligatori (POS, PSC, DVR), scadenze, figure normative e cantieri attivi. Precisione, affidabilità e AI integrata.</p>
+          <p class="hero-ctas">
+            <a class="btn primary" href="#contact">Richiedi demo</a>
+            <a class="btn" href="#features">Scopri di più</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="features" class="container features">
+        <h2>Funzionalità principali</h2>
+        <div class="grid">
+          <article>
+            <h3>Documenti obbligatori</h3>
+            <p>Gestione centralizzata di POS, PSC, DVR con versioning e accessi controllati.</p>
+          </article>
+          <article>
+            <h3>Controlli e ispezioni</h3>
+            <p>Checklist digitali, report con foto e assegnazione azioni correttive.</p>
+          </article>
+          <article>
+            <h3>Alert e scadenze</h3>
+            <p>Notifiche e calendario scadenze per certificazioni e visite mediche.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container ai-core">
+        <h2>Black Hole — Modulo AI</h2>
+        <p>Generazione automatica di documenti, classificazione intelligente, alert predittivi e analisi immagini da cantiere. Riduce il tempo di produzione documentale e anticipa rischi di non conformità.</p>
+        <ul class="ai-features">
+          <li>Generazione automatica POS/PSC/DVR</li>
+          <li>Classificazione documenti e OCR</li>
+          <li>Alert predittivi su scadenze e non conformità</li>
+          <li>Analisi immagini per rilevazione DPI e situazioni a rischio</li>
+        </ul>
+      </section>
+
+      <section class="container target">
+        <h2>Target</h2>
+        <p>Ideale per PMI edili (10–200 dipendenti), coordinatori sicurezza (CSE/CSP) e consulenti RSPP che richiedono un'app moderna e affidabile conforme al D.Lgs. 81/2008.</p>
+      </section>
+
+      <section id="pricing" class="container pricing">
+        <h2>Piani e prezzi</h2>
+        <div class="grid pricing-grid">
+          <article class="tier">
+            <h3>Starter</h3>
+            <p class="price">€49 / mese</p>
+            <ul>
+              <li>Gestione documenti base</li>
+              <li>Checklist e report</li>
+              <li>Email support</li>
+            </ul>
+            <a class="btn" href="#contact">Inizia</a>
+          </article>
+          <article class="tier featured">
+            <h3>Professional</h3>
+            <p class="price">€149 / mese</p>
+            <ul>
+              <li>Tutto in Starter</li>
+              <li>Black Hole AI (limitato)</li>
+              <li>Integrazioni e dashboard avanzate</li>
+            </ul>
+            <a class="btn primary" href="#contact">Scegli Professional</a>
+          </article>
+          <article class="tier">
+            <h3>Business</h3>
+            <p class="price">€299 / mese</p>
+            <ul>
+              <li>Tutto in Professional</li>
+              <li>Black Hole AI completo</li>
+              <li>Supporto dedicato</li>
+            </ul>
+            <a class="btn" href="#contact">Contattaci</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="container about">
+        <h2>Chi è Gaia</h2>
+        <p>Gaia HSE è una soluzione pensata per team che vogliono mettere la sicurezza al centro. Semplice da adottare e configurare, con focus su usabilità e conformità normativa.</p>
+      </section>
+
+      <section id="contact" class="container contact">
+        <h2>Contattaci</h2>
+        <form id="contact-form">
+          <label>Nome
+            <input type="text" name="name" required />
+          </label>
+          <label>Email
+            <input type="email" name="email" required />
+          </label>
+          <label>Messaggio
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button class="btn primary" type="submit">Invia</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Gaia HSE — Tutti i diritti riservati.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
