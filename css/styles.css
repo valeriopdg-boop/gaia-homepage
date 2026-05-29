@@ -1464,36 +1464,39 @@ h3 {
   }
 }
 
-/* Mobile e narrow */
-@media (max-width: 720px) {
-  :root {
-    --header-h: 52px;
+/* Nav compatto — tablet e mobile (evita overlap sull’hero) */
+@media (max-width: 900px) {
+  .site-header {
+    height: auto;
+    min-height: var(--header-h);
+    overflow-x: clip;
   }
 
-  body {
-    font-size: 16px;
-  }
-
-  .container {
-    padding-left: max(1rem, env(safe-area-inset-left, 0px));
-    padding-right: max(1rem, env(safe-area-inset-right, 0px));
+  .header-inner {
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: var(--header-h);
+    row-gap: 0;
   }
 
   .nav-toggle {
     display: flex;
+    margin-left: auto;
+    flex-shrink: 0;
   }
 
   .site-header .brand {
-    font-size: 1.125rem;
-    height: auto;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 
   .site-nav {
     display: none;
-    position: absolute;
-    top: var(--header-h);
-    left: max(12px, env(safe-area-inset-left, 0px));
-    right: max(12px, env(safe-area-inset-right, 0px));
+    position: static;
+    flex: 1 1 100%;
+    order: 10;
+    width: 100%;
+    margin: 0;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
@@ -1508,6 +1511,8 @@ h3 {
 
   .site-nav.is-open {
     display: flex;
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
   }
 
   .site-nav a:not(.btn) {
@@ -1528,9 +1533,26 @@ h3 {
     justify-content: center;
     text-align: center;
   }
+}
 
-  .header-inner {
-    position: relative;
+/* Mobile e narrow */
+@media (max-width: 720px) {
+  :root {
+    --header-h: 52px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding-left: max(1rem, env(safe-area-inset-left, 0px));
+    padding-right: max(1rem, env(safe-area-inset-right, 0px));
+  }
+
+  .site-header .brand {
+    font-size: 1.125rem;
+    height: auto;
   }
 
   .section {
@@ -1717,11 +1739,6 @@ h3 {
 
 /* Smartphone molto piccoli */
 @media (max-width: 380px) {
-  .site-nav {
-    left: max(8px, env(safe-area-inset-left, 0px));
-    right: max(8px, env(safe-area-inset-right, 0px));
-  }
-
   .sparks-hud-orb-wrap {
     width: min(180px, 78vw);
   }
