@@ -1464,19 +1464,19 @@ h3 {
   }
 }
 
-/* Nav compatto — tablet e mobile (evita overlap sull’hero) */
+/* Nav compatto — tablet e mobile */
 @media (max-width: 900px) {
   .site-header {
     height: auto;
     min-height: var(--header-h);
-    overflow-x: clip;
+    overflow: visible;
   }
 
   .header-inner {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
+    height: auto;
     min-height: var(--header-h);
-    row-gap: 0;
   }
 
   .nav-toggle {
@@ -1488,50 +1488,69 @@ h3 {
   .site-header .brand {
     flex: 1 1 auto;
     min-width: 0;
+    height: var(--header-h);
   }
 
   .site-nav {
     display: none;
-    position: static;
-    flex: 1 1 100%;
-    order: 10;
-    width: 100%;
-    margin: 0;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding: 0.75rem 1rem 1.25rem;
-    background: var(--glass-fill-strong);
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--glass-shadow), var(--glass-inset);
   }
 
   .site-nav.is-open {
     display: flex;
-    margin-top: 0.35rem;
-    margin-bottom: 0.35rem;
+    position: fixed;
+    z-index: 90;
+    top: calc(var(--header-h) + env(safe-area-inset-top, 0px));
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding:
+      0.75rem
+      max(1.25rem, env(safe-area-inset-right, 0px))
+      max(1.25rem, env(safe-area-inset-bottom, 0px))
+      max(1.25rem, env(safe-area-inset-left, 0px));
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    background: rgba(5, 10, 27, 0.98);
+    backdrop-filter: blur(28px) saturate(160%);
+    -webkit-backdrop-filter: blur(28px) saturate(160%);
+    box-shadow: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .site-nav a:not(.btn) {
-    min-height: 44px;
+    min-height: 48px;
     display: flex;
     align-items: center;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--glass-border);
-    font-size: 1rem;
-    font-weight: 500;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 1.0625rem;
+    font-weight: 600;
     color: var(--on-glass);
     text-shadow: none;
   }
 
   .site-nav .btn {
-    margin-top: 0.75rem;
-    min-height: 44px;
+    margin-top: 1rem;
+    min-height: 48px;
     justify-content: center;
     text-align: center;
+    width: 100%;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  body.nav-open .site-header {
+    z-index: 110;
+    background: rgba(5, 10, 27, 0.98);
   }
 }
 

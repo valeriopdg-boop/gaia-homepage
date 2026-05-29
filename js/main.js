@@ -3,16 +3,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const siteNav = document.getElementById("site-nav");
 
   if (navToggle && siteNav) {
-    navToggle.addEventListener("click", () => {
-      const open = siteNav.classList.toggle("is-open");
+    const setNavOpen = (open) => {
+      siteNav.classList.toggle("is-open", open);
       navToggle.setAttribute("aria-expanded", String(open));
+      document.body.classList.toggle("nav-open", open);
+    };
+
+    navToggle.addEventListener("click", () => {
+      setNavOpen(!siteNav.classList.contains("is-open"));
     });
 
     siteNav.querySelectorAll('a[href^="#"]').forEach((link) => {
       link.addEventListener("click", () => {
-        siteNav.classList.remove("is-open");
-        navToggle.setAttribute("aria-expanded", "false");
+        setNavOpen(false);
       });
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && siteNav.classList.contains("is-open")) {
+        setNavOpen(false);
+      }
     });
   }
 
