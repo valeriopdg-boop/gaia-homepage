@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Gaia HSE — piattaforma SaaS per la compliance HSE in ogni luogo di lavoro: uffici, stabilimenti, cantieri. Documenti, scadenze, figure normative e sedi in cloud, con Sparks. D.Lgs. 81/2008." />
+    <title>Gaia HSE — Piattaforma HSE per ogni luogo di lavoro</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="bg-scene" id="bg-scene" aria-hidden="true">
+      <div class="bg-base"></div>
+
+      <svg class="bg-defs" width="0" height="0" focusable="false">
+        <defs>
+          <!-- Viola → blu (centro chiaro, bordo profondo) -->
+          <radialGradient id="sphere-grad-violet" cx="34%" cy="30%" r="70%">
+            <stop offset="0%" stop-color="#ddd6fe" />
+            <stop offset="40%" stop-color="#8b5cf6" />
+            <stop offset="100%" stop-color="#5b21b6" />
+          </radialGradient>
+          <radialGradient id="sphere-grad-purple" cx="32%" cy="28%" r="68%">
+            <stop offset="0%" stop-color="#c4b5fd" />
+            <stop offset="45%" stop-color="#7c3aed" />
+            <stop offset="100%" stop-color="#4c1d95" />
+          </radialGradient>
+          <radialGradient id="sphere-grad-indigo" cx="36%" cy="32%" r="72%">
+            <stop offset="0%" stop-color="#a5b4fc" />
+            <stop offset="50%" stop-color="#6366f1" />
+            <stop offset="100%" stop-color="#3730a3" />
+          </radialGradient>
+          <radialGradient id="sphere-grad-blue" cx="30%" cy="26%" r="70%">
+            <stop offset="0%" stop-color="#93c5fd" />
+            <stop offset="48%" stop-color="#3b82f6" />
+            <stop offset="100%" stop-color="#1e3a8a" />
+          </radialGradient>
+          <radialGradient id="sphere-grad-deep" cx="38%" cy="34%" r="74%">
+            <stop offset="0%" stop-color="#818cf8" />
+            <stop offset="55%" stop-color="#4338ca" />
+            <stop offset="100%" stop-color="#1d4ed8" />
+          </radialGradient>
+          <filter id="blur-soft" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="16" />
+          </filter>
+          <filter id="blur-mid" x="-45%" y="-45%" width="190%" height="190%">
+            <feGaussianBlur stdDeviation="26" />
+          </filter>
+          <filter id="blur-heavy" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="44" />
+          </filter>
+          <filter id="blur-spec" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur stdDeviation="22" />
+          </filter>
+        </defs>
+      </svg>
+
+      <!-- 6 sfere ai bordi — fuori dal testo centrale -->
+      <div class="sphere sphere--1 sphere--xxl" data-parallax="0.05">
+        <div class="sphere-inner"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="100" fill="url(#sphere-grad-blue)" filter="url(#blur-heavy)" /></svg></div>
+      </div>
+      <div class="sphere sphere--2 sphere--lg" data-parallax="0.09">
+        <div class="sphere-inner"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="96" fill="url(#sphere-grad-deep)" filter="url(#blur-mid)" /></svg></div>
+      </div>
+      <div class="sphere sphere--3 sphere--xl" data-parallax="0.06">
+        <div class="sphere-inner"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="98" fill="url(#sphere-grad-indigo)" filter="url(#blur-heavy)" /></svg></div>
+      </div>
+      <div class="sphere sphere--4 sphere--md" data-parallax="0.12">
+        <div class="sphere-inner"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="94" fill="url(#sphere-grad-purple)" filter="url(#blur-soft)" /></svg></div>
+      </div>
+      <div class="sphere sphere--5 sphere--lg" data-parallax="0.08">
+        <div class="sphere-inner"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="96" fill="url(#sphere-grad-violet)" filter="url(#blur-mid)" /></svg></div>
+      </div>
+      <div class="sphere sphere--6 sphere--md" data-parallax="0.1">
+        <div class="sphere-inner"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="94" fill="url(#sphere-grad-blue)" filter="url(#blur-soft)" /></svg></div>
+      </div>
+    </div>
+
+    <header class="site-header glass-bar">
+      <div class="container header-inner">
+        <a class="brand" href="#">Gaia<span class="brand-mark">HSE</span></a>
+        <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav">
+          <a href="#problem">Problema</a>
+          <a href="#solution">Prodotto</a>
+          <a href="#how">Come funziona</a>
+          <a href="#sparks">Sparks</a>
+          <a class="btn btn-sm" href="#contact">Richiedi demo</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="glass-surface">
+      <section class="hero hero--hud" aria-labelledby="hero-title">
+        <div class="container hero-hud">
+          <p class="hero-hud-watermark" aria-hidden="true">GAIA HSE</p>
+          <div class="hero-hud-stage">
+            <div class="hero-hud-content">
+              <h1 id="hero-title">Compliance HSE ovunque si lavora,<br />senza carta né caos.</h1>
+              <p class="lead">
+                Gaia HSE è la piattaforma per uffici, stabilimenti produttivi e cantieri: documenti obbligatori,
+                scadenze, figure normative e luoghi di lavoro.
+              </p>
+              <p class="hero-sparks-line">
+                <strong>Sparks</strong> — l'AI integrata che genera documenti, classifica gli archivi e anticipa i rischi.
+              </p>
+              <div class="hero-ctas">
+                <a class="btn primary" href="#contact">Richiedi una demo gratuita</a>
+                <a class="btn ghost" href="#how">Scopri come funziona</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="problem" class="section problem">
+        <div class="container">
+          <p class="eyebrow">Il problema</p>
+          <h2>La sicurezza non può dipendere da carta, email e consulenti esterni.</h2>
+          <p class="section-lead">
+            Senza un sistema condiviso, la compliance si spezza tra sedi: versioni diverse dello stesso documento,
+            scadenze che nessuno vede in tempo, responsabilità HSE difficili da ricostruire. Il problema non è solo
+            l'organizzazione — al primo controllo diventa contestazione, fermo cantiere o sanzione.
+          </p>
+          <div class="grid pain-grid">
+            <article class="card glass-card float-card" style="--float-delay: 0s">
+              <span class="card-icon card-icon--hud" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 7v7l4 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                  <circle cx="14" cy="14" r="9" stroke="currentColor" stroke-width="1.2"/>
+                </svg>
+              </span>
+              <h3>Inefficienza</h3>
+              <p>POS, PSC e DVR aggiornati a mano, versioni non allineate, ore perse a cercare il file giusto.</p>
+            </article>
+            <article class="card glass-card float-card" style="--float-delay: 0.4s">
+              <span class="card-icon card-icon--hud" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 8v8M14 19v1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                  <path d="M6 22L14 6l8 16H6z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <h3>Errori e gap normativi</h3>
+              <p>Scadenze non visibili, figure (RSPP, CSE, preposti) non collegate al sito, ispezioni non tracciate tra le sedi.</p>
+            </article>
+            <article class="card glass-card float-card" style="--float-delay: 0.8s">
+              <span class="card-icon card-icon--hud" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 22h12M9 18h10M10 14h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                  <path d="M14 6v12M11 9h6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <h3>Rischio sanzioni</h3>
+              <p>In caso di controllo, l'assenza di prove documentali e cronologie chiare espone l'impresa a costi elevati.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="solution" class="section solution">
+        <div class="container">
+          <p class="eyebrow">La soluzione</p>
+          <h2>Tutta la compliance HSE, in un'unica piattaforma.</h2>
+          <p class="section-lead">
+            Gaia HSE sostituisce il patchwork di strumenti con una piattaforma cloud centralizzata:
+            sempre aggiornata, accessibile al team e conforme al D.Lgs. 81/2008 — per ogni tipologia di luogo di lavoro.
+          </p>
+          <div class="grid feature-grid">
+            <article class="card card-feature glass-card float-card" style="--float-delay: 0.1s">
+              <h3>Documenti obbligatori</h3>
+              <p>POS, PSC, DVR, DUVRI e tutta la documentazione HSE — versioning, permessi e storico audit-ready.</p>
+            </article>
+            <article class="card card-feature glass-card float-card" style="--float-delay: 0.25s">
+              <h3>Scadenze e alert</h3>
+              <p>Certificazioni, visite mediche, formazione e adempimenti in un calendario con notifiche automatiche.</p>
+            </article>
+            <article class="card card-feature glass-card float-card" style="--float-delay: 0.4s">
+              <h3>Figure normative</h3>
+              <p>RSPP, CSE, CSP, preposti e addetti: anagrafica, incarichi e documentazione per impresa e per sede.</p>
+            </article>
+            <article class="card card-feature glass-card float-card" style="--float-delay: 0.55s">
+              <h3>Luoghi di lavoro</h3>
+              <p>Uffici, stabilimenti, cantieri e siti operativi sempre sotto controllo sulla piattaforma: Sparks monitora stato documentale, ispezioni e criticità in tempo reale, sede per sede.</p>
+            </article>
+            <article class="card card-feature glass-card float-card" style="--float-delay: 0.7s">
+              <h3>Controlli e ispezioni</h3>
+              <p>Checklist digitali, report con foto, non conformità e azioni correttive assegnate e monitorate.</p>
+            </article>
+            <article class="card card-feature glass-card float-card" style="--float-delay: 0.85s">
+              <h3>Report e tracciabilità</h3>
+              <p>Export e cronologie per audit interni, clienti e verifiche ispettive — senza ricostruire tutto a posteriori.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="section how">
+        <div class="container">
+          <p class="eyebrow">Come funziona</p>
+          <h2>Onboarding rapido</h2>
+          <p class="section-lead">
+            Tre passaggi e un'interfaccia chiara che tutti possono usare — da chi è in ufficio a chi è in stabilimento o in cantiere.
+            Niente gestionale complesso: ogni ruolo trova subito documenti, scadenze e attività senza formazione infinita.
+          </p>
+          <ol class="steps grid steps-grid">
+            <li class="card glass-card step-card float-card" style="--float-delay: 0.1s">
+              <span class="step-num" aria-hidden="true">01</span>
+              <h3>Configura impresa e sedi</h3>
+              <p>Inserisci luoghi di lavoro, reparti, figure normative e documenti esistenti. Import guidato dove serve.</p>
+            </li>
+            <li class="card glass-card step-card float-card" style="--float-delay: 0.35s">
+              <span class="step-num" aria-hidden="true">02</span>
+              <h3>Centralizza documenti e scadenze</h3>
+              <p>Carica POS, PSC, DVR e allegati. Il sistema allinea versioni, permessi e promemoria su ogni adempimento.</p>
+            </li>
+            <li class="card glass-card step-card float-card" style="--float-delay: 0.6s">
+              <span class="step-num" aria-hidden="true">03</span>
+              <h3>Monitora, ispeziona, anticipa</h3>
+              <p>Monitoraggio in tempo reale, checklist sul campo e Sparks che segnala gap e rischi prima che diventino sanzioni.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <div class="cta-band">
+        <div class="container cta-band-inner glass-panel">
+          <p class="cta-band-text">Il motore AI è già dentro la piattaforma — non un modulo a parte.</p>
+          <a class="btn primary" href="#sparks">Vedi Sparks</a>
+        </div>
+      </div>
+
+      <section id="sparks" class="section sparks">
+        <div class="container">
+          <div class="ai-panel ai-panel--hud glass-panel tide-glow">
+            <div class="ai-copy">
+              <p class="sparks-brand">Sparks</p>
+              <h2>L'AI di Gaia HSE. Meno tempo sui documenti, più tempo in sicurezza.</h2>
+              <p>
+                Sparks non è un optional: è il motore intelligente della piattaforma.
+                Accelera la produzione di POS, PSC e DVR, ordina gli archivi, segnala scadenze e non conformità
+                in anticipo e analizza le foto da ufficio, stabilimento o cantiere per controlli e verifiche DPI.
+              </p>
+              <ul class="ai-list">
+                <li>Generazione automatica di bozze documentali HSE</li>
+                <li>Classificazione, tagging e OCR su migliaia di file</li>
+                <li>Alert predittivi su scadenze, formazione e gap normativi</li>
+                <li>Analisi immagini: DPI, accessi, situazioni a rischio</li>
+              </ul>
+            </div>
+            <div class="ai-visual" role="group" aria-labelledby="sparks-visual-title sparks-visual-desc">
+              <h3 id="sparks-visual-title" class="visually-hidden">Sparks — motore AI di Gaia HSE</h3>
+              <p id="sparks-visual-desc" class="visually-hidden">
+                Schema dei moduli collegati al nucleo Sparks: generazione automatica di documenti HSE,
+                classificazione e OCR sugli archivi, alert predittivi su scadenze e gap normativi.
+              </p>
+              <div class="sparks-hud" id="sparks-visual" aria-hidden="true">
+                <div class="sparks-hud-smoke"></div>
+                <p class="sparks-hud-watermark">SPARKS</p>
+                <div class="sparks-hud-orb-wrap">
+                  <div class="sparks-hud-orb"></div>
+                  <div class="sparks-hud-orb-glow"></div>
+                </div>
+                <svg class="sparks-hud-lines" viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M 198 198 Q 120 120 52 58" fill="none" stroke="rgba(255,255,255,0.38)" stroke-width="1" />
+                  <circle cx="198" cy="198" r="2.5" fill="rgba(216,180,254,0.95)" />
+                  <path d="M 205 192 Q 280 100 348 72" fill="none" stroke="rgba(255,255,255,0.38)" stroke-width="1" />
+                  <circle cx="205" cy="192" r="2.5" fill="rgba(216,180,254,0.95)" />
+                  <path d="M 200 210 Q 140 300 48 352" fill="none" stroke="rgba(255,255,255,0.38)" stroke-width="1" />
+                  <circle cx="200" cy="210" r="2.5" fill="rgba(216,180,254,0.95)" />
+                </svg>
+                <div class="sparks-hud-labels">
+                  <div class="sparks-hud-node" data-hud="gen">
+                    <span class="sparks-hud-text">Generazione</span>
+                  </div>
+                  <div class="sparks-hud-node" data-hud="class">
+                    <span class="sparks-hud-text">Classificazione</span>
+                  </div>
+                  <div class="sparks-hud-node" data-hud="alert">
+                    <span class="sparks-hud-text">Alert</span>
+                  </div>
+                </div>
+                <div class="sparks-hud-vignette"></div>
+                <div class="sparks-hud-scan"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="target" class="section target">
+        <div class="container">
+          <p class="eyebrow">Per chi è</p>
+          <h2>Per qualsiasi luogo di lavoro — e chi lo gestisce ogni giorno.</h2>
+          <p class="section-lead">
+            Ufficio, stabilimento produttivo, magazzino, cantiere o sede commerciale: Gaia HSE si adatta al contesto,
+            non il contrario. Software moderno per organizzazioni di ogni dimensione e settore.
+          </p>
+          <div class="grid target-grid">
+            <article class="card glass-card float-card" style="--float-delay: 0.2s">
+              <h3>Imprese e PMI</h3>
+              <p>Industria, servizi, logistica, edilizia: un unico sistema per sedi, reparti e siti, con meno caos documentale tra ufficio e campo.</p>
+            </article>
+            <article class="card glass-card float-card" style="--float-delay: 0.5s">
+              <h3>Figure della sicurezza</h3>
+              <p>RSPP, CSE, CSP, preposti e addetti: documenti, ispezioni e azioni correttive sotto controllo su ogni luogo di lavoro.</p>
+            </article>
+            <article class="card glass-card float-card" style="--float-delay: 0.75s">
+              <h3>Consulenti RSPP</h3>
+              <p>Studio o libero professionista: gestisci più clienti con portale condiviso, aggiornamenti tracciati e meno email con allegati.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container about-inner glass-panel">
+          <p class="eyebrow">Perché Gaia</p>
+          <h2>Software company, non gestionale legacy.</h2>
+          <p class="about-tagline">Affidabilità · Precisione · Modernità</p>
+          <p>
+            Gaia HSE nasce per chi gestisce persone e rischi in contesti diversi ogni giorno: un'interfaccia chiara,
+            dati sempre aggiornati e Sparks, che riduce il lavoro ripetitivo sulla documentazione.
+            Il nostro obiettivo è mettere la conformità al D.Lgs. 81/2008 al servizio dell'operatività —
+            non il contrario.
+          </p>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq">
+        <div class="container">
+          <p class="eyebrow">FAQ</p>
+          <h2>Domande frequenti</h2>
+          <div class="faq-list">
+            <details class="faq-item glass-card">
+              <summary>Gaia HSE è conforme al D.Lgs. 81/2008?</summary>
+              <p>
+                La piattaforma copre gli adempimenti della sicurezza sul lavoro in Italia — documenti, figure,
+                scadenze e tracciabilità del D.Lgs. 81/2008 — per uffici, stabilimenti, cantieri e ogni altra sede.
+                In onboarding allineiamo luoghi di lavoro e documentazione al tuo contesto.
+              </p>
+            </details>
+            <details class="faq-item glass-card">
+              <summary>Posso migrare documenti già esistenti?</summary>
+              <p>
+                Sì. Puoi caricare POS, PSC, DVR e allegati storici; Sparks supporta classificazione e indicizzazione
+                per rendere reperibile ciò che oggi è disperso tra email e cartelle condivise.
+              </p>
+            </details>
+            <details class="faq-item glass-card">
+              <summary>Quanti utenti e luoghi di lavoro posso gestire?</summary>
+              <p>
+                La piattaforma scala con la tua organizzazione — da una sede a reti multi-sito e configurazioni
+                multi-impresa per studi RSPP. In demo definiamo insieme utenti, sedi e moduli attivi.
+              </p>
+            </details>
+            <details class="faq-item glass-card">
+              <summary>Come si richiede una demo?</summary>
+              <p>
+                Compila il modulo in fondo alla pagina: ti contattiamo per una sessione sulle tue sedi
+                e sui documenti che vuoi centralizzare per primi.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="privacy" class="section privacy">
+        <div class="container privacy-inner glass-panel">
+          <p class="eyebrow">Privacy</p>
+          <h2>Informativa sul trattamento dei dati</h2>
+          <p>
+            I dati inviati tramite il modulo demo (nome, email, azienda, messaggio) sono usati esclusivamente
+            per ricontattarti e organizzare una dimostrazione di Gaia HSE. Non cediamo i dati a terzi per
+            marketing. Puoi richiedere accesso o cancellazione scrivendo al titolare del trattamento
+            all'indirizzo indicato in risposta alla tua richiesta.
+          </p>
+          <p>
+            Il sito non utilizza cookie di profilazione. Eventuali cookie tecnici servono solo al funzionamento
+            della pagina. Per domande: usa il <a href="#contact">modulo contatti</a>.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container contact-inner">
+          <div class="contact-copy">
+            <p class="eyebrow">Contatti</p>
+            <h2>Richiedi una demo gratuita.</h2>
+            <p>
+              Raccontaci la tua impresa o il tuo studio: prepariamo una sessione su sedi, documenti
+              e obiettivi HSE — senza impegno.
+            </p>
+          </div>
+          <form
+            id="contact-form"
+            class="contact-form glass-panel"
+            method="post"
+            data-formspree-id=""
+            data-contact-email="info@gaiahse.com"
+            novalidate
+          >
+            <div id="form-status" class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+            <label>
+              <span>Nome e cognome</span>
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label>
+              <span>Email lavoro</span>
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+            <label>
+              <span>Azienda o studio</span>
+              <input type="text" name="company" autocomplete="organization" />
+            </label>
+            <label>
+              <span>Ruolo</span>
+              <select name="role">
+                <option value="">Seleziona…</option>
+                <option value="pmi">Impresa / PMI</option>
+                <option value="hr">HR / HSE interno</option>
+                <option value="cse">CSE / CSP / Preposto</option>
+                <option value="rspp">Consulente RSPP</option>
+                <option value="other">Altro</option>
+              </select>
+            </label>
+            <label>
+              <span>Di cosa hai bisogno?</span>
+              <textarea name="message" rows="4" placeholder="Es. 3 sedi (ufficio + stabilimento), migrazione DVR, interesse a Sparks…" required></textarea>
+            </label>
+            <label class="form-privacy">
+              <input type="checkbox" name="privacy" value="yes" required />
+              <span>
+                Ho letto l'<a href="#privacy">informativa privacy</a> e acconsento al trattamento dei dati
+                per essere ricontattato in merito alla demo.
+              </span>
+            </label>
+            <button class="btn primary" type="submit">Invia richiesta demo</button>
+            <p class="form-note">Risposta entro 1–2 giorni lavorativi. Nessuna newsletter automatica.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer glass-bar">
+      <div class="container footer-inner">
+        <a class="brand" href="#">Gaia<span class="brand-mark">HSE</span></a>
+        <nav class="footer-nav" aria-label="Link footer">
+          <a href="#solution">Prodotto</a>
+          <a href="#sparks">Sparks</a>
+          <a href="#faq">FAQ</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#contact">Contatti</a>
+        </nav>
+        <p>© <span id="year"></span> Gaia HSE — Compliance HSE per ogni luogo di lavoro · D.Lgs. 81/2008</p>
+      </div>
+    </footer>
+
+    <script src="js/parallax.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
