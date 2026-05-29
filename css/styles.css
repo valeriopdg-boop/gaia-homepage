@@ -11,10 +11,11 @@
   --glass-blur-sm: 24px;
   --glass-shadow: 0 8px 48px rgba(0, 0, 0, 0.45);
   --glass-inset: inset 0 1px 0 rgba(255, 255, 255, 0.22);
-  --on-glass: rgba(255, 255, 255, 0.96);
-  --on-glass-muted: rgba(255, 255, 255, 0.72);
-  --on-glass-subtle: rgba(255, 255, 255, 0.48);
-  --accent: #a5b4fc;
+  --on-glass: #ffffff;
+  --on-glass-muted: rgba(255, 255, 255, 0.97);
+  --on-glass-subtle: rgba(255, 255, 255, 0.9);
+  --accent: #e9d5ff;
+  --text-shadow-readable: 0 1px 2px rgba(0, 0, 0, 0.65), 0 2px 12px rgba(0, 0, 0, 0.4);
   --accent-soft: rgba(99, 102, 241, 0.3);
   --glow-violet: rgba(139, 92, 246, 0.4);
   --glow-blue: rgba(59, 130, 246, 0.35);
@@ -50,6 +51,7 @@ body {
   color: var(--on-glass);
   background: var(--bg-deep);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
 
@@ -236,7 +238,7 @@ main,
 .glass-section h3,
 .glass-card h3 {
   color: var(--on-glass);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .glass-surface p,
@@ -244,7 +246,8 @@ main,
 .glass-section p,
 .glass-section .section-lead,
 .glass-card p {
-  color: var(--on-glass-muted);
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
 }
 
 .float-card {
@@ -311,10 +314,10 @@ main,
 
 .site-nav a:not(.btn) {
   font-size: 0.9375rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+  color: #ffffff;
   text-decoration: none;
-  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.45);
+  text-shadow: var(--text-shadow-readable);
   transition: color 0.2s var(--ease-wave), text-shadow 0.2s var(--ease-wave);
 }
 
@@ -424,23 +427,25 @@ main,
 .eyebrow {
   margin: 0 0 0.75rem;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
+  text-shadow: var(--text-shadow-readable);
 }
 
 .section-lead {
   max-width: 52ch;
   margin: 0 0 2.5rem;
   font-size: 1.125rem;
-  font-weight: 400;
-  color: var(--on-glass-muted);
+  font-weight: 500;
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
 }
 
 h1, h2, h3 {
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.03em;
   color: var(--on-glass);
 }
@@ -512,15 +517,17 @@ h3 {
 
 .hero--hud h1 {
   margin-bottom: 1rem;
-  text-shadow: 0 0 48px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  text-shadow: var(--text-shadow-readable), 0 0 48px rgba(0, 0, 0, 0.5);
 }
 
 .hero .lead {
   margin: 0 auto 1rem;
   font-size: 1.125rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
-  color: var(--on-glass-muted);
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
 }
 
 .hero-sparks-line {
@@ -529,13 +536,14 @@ h3 {
   font-size: 0.9375rem;
   line-height: 1.5;
   color: var(--on-glass-muted);
+  text-shadow: var(--text-shadow-readable);
 }
 
 .hero-sparks-line strong {
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: 0 0 24px var(--glow-violet);
+  color: #ffffff;
+  text-shadow: var(--text-shadow-readable), 0 0 24px var(--glow-violet);
 }
 
 .hero-ctas {
@@ -555,7 +563,9 @@ h3 {
   padding: 0.75rem 1.25rem;
   list-style: none;
   font-size: 0.8125rem;
-  color: var(--on-glass-subtle);
+  font-weight: 500;
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
   background: var(--glass-fill);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -591,7 +601,7 @@ h3 {
 .section > .container > .eyebrow,
 .section > .container > h2,
 .section > .container > .section-lead {
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55), 0 4px 24px rgba(0, 0, 0, 0.45);
 }
 
 .contact-copy .eyebrow,
@@ -645,7 +655,8 @@ h3 {
 .tier-desc {
   margin: 0 0 0.5rem;
   font-size: 0.875rem;
-  color: var(--on-glass-subtle);
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
 }
 
 .pricing-lead {
@@ -680,8 +691,8 @@ h3 {
   content: "+";
   float: right;
   font-size: 1.25rem;
-  font-weight: 300;
-  color: var(--on-glass-muted);
+  font-weight: 500;
+  color: var(--on-glass);
   transition: transform 0.2s var(--ease-wave);
 }
 
@@ -693,8 +704,9 @@ h3 {
   margin: 0;
   padding: 0 1.25rem 1.25rem;
   font-size: 0.9375rem;
-  color: var(--on-glass-muted);
+  color: var(--on-glass);
   line-height: 1.55;
+  text-shadow: var(--text-shadow-readable);
 }
 
 .card {
@@ -713,7 +725,8 @@ h3 {
 .card p {
   margin: 0;
   font-size: 0.9375rem;
-  color: var(--on-glass-muted);
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
 }
 
 .card-icon {
@@ -766,7 +779,9 @@ h3 {
   margin: 0;
   flex: 1 1 16rem;
   font-size: 1.0625rem;
-  color: var(--on-glass-muted);
+  font-weight: 500;
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
 }
 
 .ai-panel--hud {
@@ -789,17 +804,18 @@ h3 {
 .sparks-brand {
   margin: 0 0 1rem;
   font-size: clamp(3rem, 10vw, 4.75rem);
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: -0.04em;
   color: var(--on-glass);
-  text-shadow: 0 0 60px var(--accent-soft);
+  text-shadow: var(--text-shadow-readable), 0 0 60px var(--accent-soft);
 }
 
 .ai-copy .sparks-brand + h2 {
   font-size: clamp(1.25rem, 3vw, 1.5rem);
-  font-weight: 400;
-  color: var(--on-glass-muted);
+  font-weight: 500;
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
   margin-bottom: 1.25rem;
 }
 
@@ -812,7 +828,8 @@ h3 {
 }
 
 .ai-copy p {
-  color: var(--on-glass-muted);
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
 }
 
 .ai-list {
@@ -825,7 +842,8 @@ h3 {
   position: relative;
   padding: 0.5rem 0 0.5rem 1.5rem;
   font-size: 0.9375rem;
-  color: var(--on-glass-muted);
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
 }
 
 .ai-list li::before {
@@ -1089,7 +1107,8 @@ h3 {
 .tier li {
   padding: 0.45rem 0;
   font-size: 0.9375rem;
-  color: var(--on-glass-muted);
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
   border-bottom: 1px solid var(--glass-border);
 }
 
@@ -1107,14 +1126,14 @@ h3 {
 
 .price .amount {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.04em;
   color: var(--on-glass);
 }
 
 .price .period {
   font-size: 0.875rem;
-  color: var(--on-glass-subtle);
+  color: var(--on-glass);
 }
 
 .badge {
@@ -1147,7 +1166,8 @@ h3 {
 }
 
 .about-inner > p:last-child {
-  color: var(--on-glass-muted);
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
 }
 
 /* Contact */
@@ -1158,7 +1178,8 @@ h3 {
 }
 
 .contact-copy p {
-  color: var(--on-glass-muted);
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
 }
 
 .contact-form {
@@ -1173,8 +1194,9 @@ h3 {
 
 .contact-form label span {
   font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--on-glass-muted);
+  font-weight: 600;
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
 }
 
 .contact-form input,
@@ -1208,7 +1230,7 @@ h3 {
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: var(--on-glass-subtle);
+  color: var(--on-glass-muted);
 }
 
 .contact-form input:focus,
@@ -1227,7 +1249,8 @@ h3 {
   margin: 0.25rem 0 0.5rem;
   font-size: 0.8125rem;
   line-height: 1.45;
-  color: var(--on-glass-muted);
+  color: var(--on-glass);
+  text-shadow: var(--text-shadow-readable);
   cursor: pointer;
 }
 
@@ -1279,17 +1302,17 @@ h3 {
 .privacy-footer-title {
   margin: 0 0 0.5rem;
   font-size: 0.6875rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--on-glass-subtle);
+  color: var(--on-glass);
 }
 
 .privacy-footer p {
   margin: 0 0 0.65rem;
   font-size: 0.6875rem;
   line-height: 1.5;
-  color: var(--on-glass-subtle);
+  color: var(--on-glass-muted);
 }
 
 .privacy-footer p:last-child {
@@ -1297,7 +1320,7 @@ h3 {
 }
 
 .privacy-footer a {
-  color: var(--on-glass-muted);
+  color: var(--on-glass);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -1329,7 +1352,8 @@ h3 {
 
 .footer-nav a {
   font-size: 0.8125rem;
-  color: var(--on-glass-muted);
+  font-weight: 500;
+  color: var(--on-glass);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -1341,7 +1365,7 @@ h3 {
 .footer-inner p {
   margin: 0;
   font-size: 0.8125rem;
-  color: var(--on-glass-subtle);
+  color: var(--on-glass);
 }
 
 /* Scroll reveal (JS) */
