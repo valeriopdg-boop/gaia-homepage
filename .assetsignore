@@ -1,0 +1,7 @@
+.git
+.github
+node_modules
+.wrangler
+assets/sparks-orb.png
+assets/sparks-ref.png
+README.md

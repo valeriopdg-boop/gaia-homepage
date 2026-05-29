@@ -4,6 +4,31 @@ Landing page di presentazione per **Gaia HSE** — piattaforma SaaS B2B per comp
 ## Sezioni
 Hero · Problema · Prodotto (6 pillar) · Come funziona · Sparks · Target · Perché Gaia · FAQ · Contatti
 
+## Deploy (Cloudflare Pages)
+
+Sito pubblicato sull’account **Gaia HSE** via Cloudflare Pages.
+
+| URL | Uso |
+|-----|-----|
+| https://gaia-homepage.pages.dev | Produzione |
+| Preview | URL `*.gaia-homepage.pages.dev` per ogni deploy |
+
+Deploy manuale dalla cartella del progetto:
+
+```bash
+npm install
+CLOUDFLARE_ACCOUNT_ID=85bbb6066e81e0c1c8306596bdf766e0 npm run deploy
+```
+
+**Dominio custom** (es. `gaiahse.com`): Cloudflare Dashboard → Workers & Pages → `gaia-homepage` → Custom domains → aggiungi il dominio e segui i record DNS.
+
+### CI GitHub Actions
+
+Il workflow `.github/workflows/deploy-cloudflare-pages.yml` deploya su ogni push su `main`. Imposta i secret del repository:
+
+- `CLOUDFLARE_API_TOKEN` — token con permesso **Cloudflare Pages — Edit**
+- `CLOUDFLARE_ACCOUNT_ID` — `85bbb6066e81e0c1c8306596bdf766e0`
+
 ## Come provare in locale
 
 Apri la cartella del progetto e avvia un server statico (es. Python):

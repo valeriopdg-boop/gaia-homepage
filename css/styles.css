@@ -1270,23 +1270,38 @@ h3 {
   border-color: rgba(248, 113, 113, 0.35);
 }
 
-.form-note {
-  margin: 0.75rem 0 0;
-  font-size: 0.75rem;
+.privacy-footer {
+  max-width: 52rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.privacy-footer-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--on-glass-subtle);
 }
 
-.privacy-inner {
-  max-width: 720px;
+.privacy-footer p {
+  margin: 0 0 0.65rem;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+  color: var(--on-glass-subtle);
 }
 
-.privacy-inner p {
-  font-size: 0.9375rem;
+.privacy-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-footer a {
   color: var(--on-glass-muted);
-}
-
-.privacy-inner a {
-  color: var(--on-glass);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .contact-form textarea {
@@ -1296,7 +1311,7 @@ h3 {
 
 /* Footer */
 .site-footer {
-  padding: 2rem 0 2.5rem;
+  padding: 2rem 0 1.25rem;
   margin-top: 1rem;
 }
 

@@ -1,0 +1,10 @@
+{
+  "name": "gaia-homepage",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler pages deploy . --project-name gaia-homepage --commit-dirty=true"
+  },
+  "devDependencies": {
+    "wrangler": "^4.95.0"
+  }
+}
