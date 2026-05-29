@@ -1,5 +1,8 @@
 # gaia-homepage
-Pagina di presentazione per l'app Gaia HSE.
+Landing page di presentazione per **Gaia HSE** — piattaforma SaaS B2B per compliance HSE in ogni luogo di lavoro (uffici, stabilimenti, cantieri, ecc.).
+
+## Sezioni
+Hero · Problema · Prodotto (6 pillar) · Come funziona · Sparks · Target · Piani · Perché Gaia · FAQ · Contatti
 
 ## Come provare in locale
 
@@ -16,11 +19,14 @@ File principali creati:
 - `css/styles.css` — stili (tema dark/neutral)
 - `js/main.js` — script minimo (toggle nav, form)
 
-Breve descrizione (briefing integrato):
+Briefing integrato:
 
-- Cos'è: piattaforma SaaS B2B per gestione compliance HSE (D.Lgs. 81/2008), settore edile.
-- AI core "Black Hole": generazione documenti, classificazione, alert predittivi, analisi immagini.
-- Target: PMI edili, CSE/CSP, consulenti RSPP.
-- Pricing: Starter €49, Professional €149, Business €299.
+- **Cos'è:** Piattaforma SaaS B2B per compliance HSE (Health, Safety & Environment).
+- **Problema:** Carta, email e consulenti esterni → inefficienza, errori, rischio sanzioni.
+- **Soluzione:** Dashboard cloud per documenti HSE, scadenze, figure normative e luoghi di lavoro, con Sparks (AI integrata).
+- **Sparks:** Generazione documenti, classificazione, alert predittivi, analisi immagini da sede/campo.
+- **Target:** Imprese e PMI multi-settore, figure della sicurezza (RSPP, CSE, preposti), consulenti.
+- **Estetica:** Glassmorphism — base `#050a1b`, 15 sfere SVG viola→blu (7 taglie) con parallax allo scroll, pannelli vetro satinato.
+- **Pricing:** Starter €49, Professional €149, Business €299.
 
 Personalizzazioni possibili: colori, testi, logo, immagini, integrazione API per invio form.
